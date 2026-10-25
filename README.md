@@ -27,7 +27,7 @@ It ships with a seeded synthetic driving-scene generator so it runs out of the b
 ## Install
 
 ```bash
-git clone https://github.com/<your-username>/pointscope.git
+git clone https://github.com/adurbha3/pointscope.git
 cd pointscope
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
