@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pointscope"
+version = "0.1.0"
+description = "Interactive GPU-rendered debug visualizer for 3D point-cloud / LiDAR sensor sequences, with ground-truth vs. prediction bounding-box overlays."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Antara Durbha" }]
+dependencies = [
+    "numpy>=1.24",
+    "moderngl>=5.8",
+    "moderngl-window>=2.4",
+    "Pillow>=10.0",
+]
+
+[project.scripts]
+pointscope = "pointscope.app:run"
+
+[tool.setuptools.packages.find]
+include = ["pointscope*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
